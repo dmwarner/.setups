@@ -27,5 +27,6 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+command SpecIt :execute "split" substitute(expand('%:r').'Spec.groovy', 'main', 'test', 'g')
 
 
